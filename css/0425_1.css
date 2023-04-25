@@ -31,3 +31,6 @@
     margin:30px;
     /* height:150px; */
 }
+ul>li{
+    list-style-type:decimal;
+}

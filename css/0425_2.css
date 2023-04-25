@@ -1,0 +1,12 @@
+ul{margin:30px;}
+ul>li{
+    list-style-type:decimal;
+    list-style-position:outside;
+    list-style-position: inside;
+    list-style-image:url(../imgs/icon1.gif); 
+    /* list-style:none; */
+    /* list-style:upper-alpha inside;  */
+}
+ul>li:hover{
+list-style-image:url(../imgs/icon2.gif);
+}
