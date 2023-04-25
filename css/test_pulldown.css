@@ -1,0 +1,52 @@
+ul {
+    width: 600px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+ul > li {
+    float:left;
+    position: relative;
+    display: block;
+    background: black;
+    width: 100px;
+    height: 50px;
+}
+ul > li > a {
+    color: white !important;
+    display: block;
+    padding: 10px;
+}
+ul > li:hover > ol {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+ol {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background: white;
+    color: white !important;
+    top: 50px;
+    left: 0;
+    width: 100px;
+}
+ol > li {
+    height: 45px;
+    transition: 0.5s;
+}
+ol > li:hover {
+    background: lightslategray;
+}
+/* ul,h1{display:inline-block;} */
+h1{background: black;
+    width: 200px;
+    /* margin: auto; */
+color:white;
+display:block;
+height:50px;
+}
+ol>li{height: 0;}
+ul>li:hover>ol>li{height: 45px;transition:0.5s;}
