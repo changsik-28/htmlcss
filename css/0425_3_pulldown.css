@@ -10,9 +10,21 @@ ul{width:600px; margin:auto;}
 ul>li{float:left;}
 /* ul{overflow:hidden;} */
 /* 이렇게 할경우에 드롭다운 네비게이션바때문에 안보인다. */
-ol{display:none; position:absolute;}
+ol{
+    /* display:none; */
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+}
 ul>li:hover{background: orange;}
-ul>li:hover>ol{display:block;}
+ul>li:hover>ol{
+    /* display:block; */
+    visibility:visible;
+    opacity:1;
+    transition:1s;
+}
+ol>li{height: 0;}
+ul>li:hover>ol>li{height: 45px;transition:0.5s;}
 ol>li{background:tomato; }
 li{position:relative;}
 ul>li{position:relative;}
@@ -34,3 +46,27 @@ ol>li:hover{background-color: lightgray;}
  ol>li>a:hover:before{
     width:5px; transition:0.2s;
  }
+
+ /* 메인메뉴에 hover 효과 주기 */
+ ul>li>a{
+    position: relative;
+ }
+ ul>li>a::after{
+    content:'';
+    display:block;
+    width:0;
+    bottom:0; left:50%; 
+    height:5px;background: blue; 
+    position:absolute;
+    /* transform:translateX(-50%); */
+    /* left:0;같은거위에는 */
+ }
+ ul>li>a:hover:after{
+    width:100%;
+    transition:0.5s;
+    left:0;
+ }
+
+ /* 문제 : 메인메뉴에 라인이 현재 좌측에서 우측으로 
+ width:0 ->100%로 커지고 있다. 기확안 변경
+ 라인이 중앙에서 양쪽으로 커지면 좋겠다. */
