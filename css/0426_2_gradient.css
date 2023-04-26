@@ -81,4 +81,5 @@ h1{
     /* 테두리에 그라디언트 넣기 */
     border:20px solid red;
     border-image:linear-gradient(gold 0%, silver 50% ,red 100%) 60 stretch;
+    -webkit-text-stroke:5px black;
 }
