@@ -29,11 +29,12 @@ ul>li>a:before{
 ul{
     position:relative;
     width:200px;
+    
 }
 ul>li{
     background:#0ABB26;
     font-weight:bold;
-    padding:5px;
+    padding:10px;
 }
 ul>li:not(:last-child){
     /* boreder-bottom:0.1px dashed white: */
@@ -62,7 +63,8 @@ div.sub{
     border:1px solid red;
 }
 ul>li:hover>div.sub{
-    width:500px;
+    width:700px;
+    height:205px;
     /* display:block;방법 1 */
     display:flex;
 }
@@ -80,4 +82,14 @@ section>ol{
 section>h3{
     font-size:1em;
     font-weight:normal;
+}
+section img{
+    width:100%;
+    display:block;
+    margin:auto;
+    height:205px;
+}
+section{
+    margin:5px;
+    box-shadow: 1px 0 lightgray;
 }
