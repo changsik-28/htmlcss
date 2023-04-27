@@ -1,0 +1,35 @@
+.top{
+    background:black;
+    color:white !important;
+    text-align: center;
+    font-style:italic;
+    padding:3px;
+}
+.nav{
+    display:flex;/* 박스안에있는게 수평 정렬 */
+    justify-content: space-between;/* 양쪽정렬 */
+    align-items: center;/* 세로중앙정렬 */
+    padding:10px;
+    border-bottom:1px solid gray;
+    height:50px;
+}
+.nav h1{
+    font-size:1.5em;
+}
+.nav i{
+    font-size: 1.5em;
+}
+.bottom{
+    border-bottom:1px solid lightgray;
+    position:relative;
+    text-align: center;
+}
+.bottom i{
+    position:absolute;
+    left:5px;
+    top:8px;
+}
+.bottom h2{
+    font-size:1em;
+    padding:5px;
+}

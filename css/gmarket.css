@@ -1,19 +1,23 @@
 label{
-    border:1px solid blue;
-    width:20px;
+    border:1px solid #0ABB26;
+    width:50px;
     display:block;
     margin:20px;
     cursor:pointer;
+    font-size:30px;
+    text-align: center;
+
     /* 마우스손모양 */
 }
-label span{
+/* label span{ 아이콘 만드는 방법2
     display:block;
     height:3px;
-    background:blue;
+    background:#0ABB26;
     border-radius:2px;
     margin:3px auto;
     width:90%;
-}
+} */
+
 /* 박스제어하기 */
 ul{
     display:none;
