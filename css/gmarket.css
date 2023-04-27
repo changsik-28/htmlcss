@@ -15,10 +15,69 @@ label span{
     width:90%;
 }
 /* 박스제어하기 */
-ul{display:none;}
+ul{
+    display:none;
+}
 input:checked+ul{
     display:block
 }
-ul>li:before{
+ul>li>a:before{
     content:'\1F60A';
+}
+
+/* 서브메뉴디자인및 구현 */
+ul{
+    position:relative;
+    width:200px;
+}
+ul>li{
+    background:#0ABB26;
+    font-weight:bold;
+    padding:5px;
+}
+ul>li:not(:last-child){
+    /* boreder-bottom:0.1px dashed white: */
+    box-shadow:1px 1px 1px 1px white;
+}
+ul>li{
+    text-indent:15px;
+}
+ul>li>a{
+    color:white !important;
+    display:block;
+}
+div.sub{
+    position:absolute;
+    left:100%;
+    top:0;
+}
+ul>li:hover{
+    background-color:lime;
+}
+ul>li:hover>a{
+    text-shadow: 1px 1px black;
+}
+div.sub{
+    display:none;
+    border:1px solid red;
+}
+ul>li:hover>div.sub{
+    width:500px;
+    /* display:block;방법 1 */
+    display:flex;
+}
+
+/* 서브메뉴디자인 */
+div.sub section{
+    /* float:left;방법1 */
+    flex:1;
+}
+section>ol{
+    font-size: 0.9em; 
+    font-weight:normal;
+    color:gray;
+}
+section>h3{
+    font-size:1em;
+    font-weight:normal;
 }
