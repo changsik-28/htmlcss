@@ -33,3 +33,42 @@
     font-size:1em;
     padding:5px;
 }
+
+/* 박스 가운데 정렬하기 */
+div.box{
+    width:400px;
+    background:pink;
+    height:200px;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box p{
+    width:60%;
+    background:orangered;
+    height:40%;
+    /* position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%); */
+    line-height: calc(200px * 0.4);
+}
+.center{
+    margin:auto;
+}
+.tac{
+    text-align:center;
+}
+body{
+    position:relative;
+}
+/* 박스를 중앙 배치하는 방법 */
+/* html,body{width:100%;height:100%;}
+.box{
+    position:absolute;
+    left:50%; height:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+} */
