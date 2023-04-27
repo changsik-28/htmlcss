@@ -1,0 +1,118 @@
+/* 서브메뉴ol이 absolute처리하면
+메인메뉴 li를 relative하거나
+메인메뉴 li를 감싸는 ul을  relative하면된다.
+ul과 li의 width는 같게 설계할예정
+서브메뉴의 위치는 left:100%;하면 
+width만큼 offset이 생긴다. */
+
+ul a{display:block; color:white !important;
+}
+ol{
+    /* display:none; ol이 주르륵 나오기 위해 display:none을 해제한다. */
+    position:absolute; } /* ol은 숨기고 */
+ul li{background: darkblue;}/* ul 안의 li 의 배경은 darkblue로 만든다. */
+/* a태그의 글자는 상속이 안된다. */
+ul{ width:200px; 
+    margin:30px;
+    text-indent:20px;/* 약간들여쓰기 */
+}
+ul li:hover{
+    background:black;
+    text-indent: 15px;
+    transition:0.5s;
+}
+ul>li{position:relative;
+    padding:10px;    
+}
+/* ul>li:hover>ol{
+    display:block;
+    width:100%;
+    left:100%; 
+    top:0;
+    transition:1s;
+    ul>li:hover 애니메이션 효과를 주기 위해 및에 사용 
+} */
+/* ul밑에li에 마우스를 올렸을때 그 밑에있는ol을 블럭처리해준다
+width를 줘야지 보이고 left 100%를 줘야지 오른쪽으로 튀어나오고
+top 0 을 줘야지 붙어서 보인다. */
+ol>li{background:teal;
+    position:relative;
+}
+
+/* 디자인 */
+/* 박스에 하얀색 줄을 주는 1번째 방법  */
+/* ul>li:nth-child(1){border-bottom:1px dotted white;}
+ul>li:nth-child(2){border-bottom:1px dotted white;}
+ul>li:nth-child(3){border-bottom:1px dotted white;}
+ul>li:nth-child(4){border-bottom:1px dotted white;} */
+ul>li:not(:last-child){border-bottom:1px dotted white;}
+
+/* 서브메뉴 안에 서브메뉴 */
+dl{
+    display:none;
+    position:absolute;    
+    left:100%; top:0;
+    /* height:0;  */
+    width:400px;
+    
+    
+}
+/* ol>li{position:relative;} */
+ol>li:hover>dl{
+    display:block;
+    width:180px;
+    left:100%;
+    top:0;    
+}
+dl>dd, dl>dt{padding:10px; background:blue;}
+dl>dt:hover,dl>dd:hover{
+    background:black;
+    color:white;
+    cursor: pointer;
+    
+}
+/* 추가 마우스를 올렸을때 서브메뉴가 천천히 보이게 하기 */
+/* ol{            내가 한거
+    visibility:hidden;
+    opacity:0;}
+ul>li:hover>ol{
+    visibility:visible;
+    opacity:1;
+    transition:1s;
+}
+ol>li{width:200px;}
+ul>li:hover>ol>li{width:100%; transition:1s;} */
+/* 삼각형 블릿기호 달기 */
+ol{
+    left:100%; top:0;
+    width:200px;
+    opacity:0;
+    visibility:hidden;
+}
+ul>li:hover>ol{opacity:1; transition:1s;}
+ol>li{height:0; opacity:0;}
+ul>li:hover>ol>li{
+    height:40px;
+    line-height:40px;
+    transition:1s; opacity: 1; 
+    visibility:visible;
+    /* 높이를 늘릴때는 1초주고,투명도를 올릴때는 2초시간 간격을준다. */
+}
+/* ---------------------------------------------------- */
+ul>li>a{position:relative;}
+ul>li>a::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:0;
+    height:0;
+    border:8px solid transparent;
+    right:0;
+    top:2px;
+    border-left-color:gray;
+}
+ul>li>a:hover:after{
+    content:''; display:block; position:absolute;
+    width:0; height:0; border:8px solid transparent;
+    right:1px; top:2px; border-left-color:white;
+}
