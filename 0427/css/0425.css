@@ -1,0 +1,86 @@
+.box{
+    width: 100px; 
+    height: 100px; 
+    border: 1px solid black;
+}
+#box1{margin: 10px 20px;}
+#box2{margin: 20px 40px;}
+#box3{margin: 30px 60px;}
+
+#mama{
+    width:95%; 
+    border:5px solid red;
+    margin: auto;
+    max-width:1000px;
+    min-width:700px;
+}
+#mama p{border: 5px solid blue;
+    width:auto;/* width:auto가 기본값 안적으면 알아서 적용됨 */
+    width:100%;/* 부모의 가로 크기width에 100%로 맞춘다. */
+    box-sizing: border-box;
+    /* box-sizing:content-box; */
+    padding:20px 50px;
+}
+#box1{
+border:5px solid black;
+border-width:10px;
+border-left-style:dashed;
+border-right-color:red;
+border-top-style: double;
+border-bottom-width:20px;
+border-bottom-color:yellow;
+/* border-width:thick thin medium; */
+}
+#box2{
+    width: 1px;height: 1px;
+    border:50px solid;
+    border-left-color: red;
+    border-right-color: blue;
+    border-top-color: orange;
+    border-bottom-color:pink;
+    text-indent:-9999px;
+}
+#box2:hover{
+    border-left-color:gold;
+    border-right-color:gold;
+}
+#box2:active{
+    border-top-color: red;
+    border-bottom-color: red;
+}
+#box3{
+    border:5px solid blue;
+    outline:10px solid red;
+    outline-offset: 10px;
+}
+#box3:hover{
+    outline:10px dashed orange;
+    outline-offset: 10px;
+    /* outline-style:dotted;
+    outline-width:10px;
+    outline-color:orange; */
+} 
+#box3{
+    border-radius:30%;
+    border-top-right-radius:50%;
+    border-radius: 10px 20px 30px 40px;
+    /* border-radius:50%;는 원을 만든다. */
+}
+#mama p{
+    font-size:30px;
+    text-stroke:3px red;
+    -webkit-text-stroke:1px red;
+}
+#mama p:hover{
+    -webkit-text-stroke:1px blue;
+    /* vendor prefix */
+    cursor:pointer;
+}
+input, button{
+    margin:10px;
+    padding:10px;
+    /* border:0; */
+    /* outline:0; */
+    all:unset;
+}
+/* button{border:0;} */

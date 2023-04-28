@@ -1,0 +1,5 @@
+.wrap{
+    background:gold;/* 테두리는 안됨 */
+    border:5px double blue;
+    color:aquamarine;
+}

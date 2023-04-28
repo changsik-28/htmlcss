@@ -1,0 +1,26 @@
+ul a{
+    display:block; padding:10px;
+}
+ul{
+    margin:auto; width: 700px;
+}
+ul>li{float:left;}
+ol{
+    visibility:hidden;
+    position:absolute;
+    opacity:0;
+}
+ul>li:hover{background:lightblue;}
+ul>li:hover>ol{
+    visibility:visible;
+    opacity:1;
+    transition:1s;
+}
+ol>li{height: 0;}
+ul>li:hover>ol>li{height:50px; transition:1s;}
+ol>li{background:cyan;}
+ol>li:hover{background:lightseagreen;}
+ol{
+    width:100%;
+    position:relative;
+}

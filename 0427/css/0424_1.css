@@ -1,0 +1,26 @@
+html{font-size: 20px;}
+:root{font-size:30px;}s
+.em{font-size:1em;}
+.per{font-size:100%;}
+.vw{font-size:1vw;}
+.px{font-size:16px;}
+.rem{font-size:1rem;}
+.ex{font-size:1ex;}
+.pc{font-size:1pc;}
+.pt{font-size:1pt;}
+
+html{border: 2px solid red;}
+body{border: 2px solid blue;}
+
+html,body{
+    /* width: 100%; */
+    height: 100%;}
+.vw{  /* height: 100%;background: pink; */
+/* width: 100vw; */
+/* 스크롤바 포함해서 100% */
+}
+.hex{background-color: #f00;}
+.rgb{background-color: rgb(255, 0, 0);}
+.rgba{background-color: rgb(255, 0, 0, 0.5);}
+.hsl{background-color: hsl(360, 100%, 50%);}
+.hsla{background-color: hsla(360, 100%, 50%, 1);}
