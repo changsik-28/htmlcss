@@ -1,0 +1,321 @@
+/* 
+h1{
+    width:900px;
+    margin:20px auto;
+    background:red;
+    color:white;
+    letter-spacing:10px;
+    padding:10px;
+    text-align:center;
+    text-transform:capitalize;
+    border:5px solid gray;
+    border-radius:5px;
+    font-family:serif;
+    text-shadow:1px 1px black;
+}
+section{width:900px; margin:auto;}
+[class*=box]{
+    float:left;
+    border:3px solid black;
+    width:250px;
+    margin:10px;
+    padding:10px;
+    line-height: 2;
+    height:315px;
+    box-sizing:border-box;
+    box-shadow:3px 4px lightgray;
+}
+[class=row]{
+    margin:10px 10px;
+    padding-left:50px;
+}
+h2{
+    text-align:center;
+    border-bottom:3px solid red;
+    width:90%;
+    margin:auto;
+    margin-bottom:20px;
+}
+ul>li{
+    text-indent:35px;
+    position:relative;
+}
+ul>li::before{
+    content:'\1f644';
+    position:absolute;
+    left:-25px; top:0;
+}
+ul>li:hover{
+    background:lightgray;
+    cursor:pointer;
+    text-indent:40px;
+    transition:1s;
+}
+.box:hover{
+    transform:scale(1.1);
+    transition:1s;
+}
+ul>li:hover::before{
+    content:'\1f60a'
+}
+.row:after{
+    overflow:visible ;
+}
+.row:after{
+	content:'';display:block;clear:both;
+}
+ul>li:nth-child(1){
+    border-bottom: 1px solid lightgray;
+    margin:auto;
+} */
+
+/* 데스크탑 버전 */
+@media screen and (min-width:1024px){
+    
+    h1 {
+        width: 900px;
+        margin: 20px auto;
+        background: red;
+        color: white;
+        letter-spacing: 10px;
+        padding: 10px;
+        text-align: center;
+        text-transform: capitalize;
+        border: 5px solid gray;
+        border-radius: 5px;
+        font-family: serif;
+        text-shadow: 1px 1px black;
+    }
+
+    section {
+        width: 900px;
+        margin: auto;
+    }
+
+    [class=box] {
+        float: left;
+        border: 3px solid black;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        line-height: 2;
+        height: 330px;
+        box-sizing: border-box;
+        box-shadow: 3px 4px gray;
+    }
+
+    [class=row] {
+        overflow: hidden;
+        margin: 10px 10px;
+        padding-left: 50px;
+    }
+
+    h2 {
+        text-align: center;
+        border-bottom: 3px solid red;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    ul>li {
+        text-indent: 35px;
+        position: relative;
+    }
+
+    ul>li::before {
+        content: '\1F644';
+        position: absolute;
+        left: -25px;
+        top: 0;
+    }
+
+    ul>li:hover {
+        background: lightgray;
+        cursor: pointer;
+        text-indent: 40px;
+        transition: 1s;
+    }
+
+    .box:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    ul>li:hover:before {
+        content: '\1F60A';
+    }
+
+    .row {
+        overflow: visible !important;
+    }
+
+    .row:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+li:not(:last-child){
+    border-bottom:1px solid lightgray;
+    margin:auto;
+}
+}
+
+/* 테블릿버전 */
+@media (min-width:768px) and (max-width:1023px){
+    h1{
+        width:100%;
+        margin:20px auto;
+        background:red;
+        color:white;
+        letter-spacing:10px;
+        padding:10px;
+        text-align:center;
+        text-transform:capitalize;
+        border:5px solid gray;
+        border-radius:5px;
+        font-family:serif;
+        text-shadow:1px 1px black;
+    }
+    section{
+        width:100%; 
+        margin:auto;
+        position:relative;
+        height:550px;
+    }
+    [class*=box]{
+        position:absolute;
+        border:3px solid black;
+        width:28%;
+        margin:10px;
+        padding:10px;
+        line-height: 2;
+        height:315px;
+        box-sizing:border-box;
+        box-shadow:3px 4px gray;
+    }
+    [class=row]{
+        margin:10px 10px;
+        padding-left:50px;
+    }
+    h2{
+        text-align:center;
+        border-bottom:3px solid red;
+        width:90%;
+        margin:auto;
+        margin-bottom:20px;
+    }
+    ul>li{
+        text-indent:35px;
+        position:relative;
+    }
+    ul>li::before{
+        content:'\1f644';
+        position:absolute;
+        left:-25px; top:0;
+    }
+    ul>li:hover{
+        background:lightgray;
+        cursor:pointer;
+        text-indent:40px;
+        transition:1s;
+    }
+    .box:hover{
+        transform:scale(1.1);
+        transition:1s;
+    }
+    ul>li:hover::before{
+        content:'\1f60a'
+    }
+    .row{
+        overflow:visible !important;
+    }
+    .row:after{
+        content:'';display:block;clear:both;
+    }
+    section{height: 600px;}
+    #toefl{
+        background:gold;
+        left:5%;
+    }
+    #toeic{
+        left:20%;
+        top:150px;
+        background:silver;
+    }
+    #english{
+        left:30%; 
+        top:250px; 
+        background:pink;
+    }
+    #japanese{
+        left:45%; 
+        top:100px; 
+        background:tan;
+    }
+    #academy{
+        left:60%; 
+        top:0; 
+        background:ivory;
+    }
+    .box:hover{z-index:1;}
+}
+
+/* 모바일 */
+@media screen and (max-width:767px){
+    h1 {      
+        margin: 20px auto;
+        background: red;
+        color: white;
+        letter-spacing: 10px;
+        padding: 10px;
+        text-align: center;
+        text-transform: capitalize;
+        border: 5px solid gray;
+        border-radius: 5px;
+        font-family: serif;
+        text-shadow: 1px 1px black;
+    }
+    section {margin: auto;}
+    [class=box] {        
+        border: 3px solid black;        
+        margin: 10px;
+        padding: 10px;
+        line-height: 2;        
+        box-sizing: border-box;
+        box-shadow: 3px 4px gray;
+    }
+    [class=row] {        
+        margin: 10px auto;
+    }
+    h2 {       
+        text-align: center;
+        border-bottom: 3px solid red;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    ul>li {        
+        text-indent: 25px;
+        position: relative;
+    }
+    ul>li::before {        
+        content: '\1F644';
+        position: absolute;
+        left: -25px;
+        top: 0;
+    }
+    ul>li:hover {        
+        background: lightgray;
+        cursor: pointer;
+        text-indent: 40px;
+        transition: 1s;
+    }
+    ul>li:hover:before {
+        content: '\1F60A';
+    }
+    li:not(:last-child){
+        border-bottom:1px solid lightgray;
+    }
+}

@@ -1,0 +1,49 @@
+.wrap{
+    border:1px solid black;
+}
+header,footer,div{
+    border:1px solid;
+    margin:5px;
+}
+section div{height:200px;}
+footer{height:100px;}
+/* 태블릿 */
+@media screen and (min-width:768px) and (max-width:1279px) {
+    section{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    section div{
+        flex:2 1 48%;
+    }
+}
+/* pc */
+@media (min-width:1280px){
+    .wrap{
+        width:1280px;
+        margin:auto;
+    }
+    section{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    section>div{
+        width:32%;
+    }
+    section>div:nth-child(5){
+        /* flex:1 1 50%; */
+        flex: 2 2 0;
+    }
+}
+footer{background:blue;}
+h3,h1{
+    text-align: center;
+    
+}
+h3{
+    color:white;
+    line-height: 100px;
+    cursor: pointer;
+}

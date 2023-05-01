@@ -1,0 +1,83 @@
+
+/* 모바일 */
+@media screen and (max-width:768px){
+    .box{
+        border:1px solid; 
+        height:80px; 
+        margin:5px;
+        background:lightgray;
+        text-align:center;
+    }
+}
+
+
+
+/* 테블릿 */
+@media screen and (min-width:768px) and (max-width:1279px){
+    /* 동적그리드 */
+.wrap{
+    width:100%; margin:0 auto;
+    background:gray;
+}
+.row{
+    margin:1%;
+    overflow:hidden;
+    /* display:flex; 방식2  */
+    display:grid;
+}
+[class*=box]{
+    border:1px solid; 
+    height:80px;
+    /* float:left;  방식1*/
+    margin:1%;
+    /* flex:1; 방식2 */
+    background:lightgray;
+    text-align:center;
+}
+.g12{grid-template-columns: repeat(1, 1fr);}
+.g6{grid-template-columns: repeat(2, 1fr);}
+.g4{grid-template-columns: repeat(3, 1fr);}
+.g3{grid-template-columns: repeat(4, 1fr);}
+.g2{grid-template-columns: repeat(6, 1fr);}
+/* .grid12{width:calc(100% - 3%);}
+.grid6{width:calc(100%/2 - 3%);}
+.grid4{width:calc(100%/3 - 3%);}
+.grid3{width:calc(100%/4 - 3%);}
+.grid2{width:calc(100%/6 - 3%);} 방식1 */
+}
+
+
+
+/* pc */
+@media screen and (min-width:1280px){
+    /* 정적인그리드 */
+    .wrap{
+        width:960px; margin:0 auto;
+        background:gray;
+        text-align:center;
+    }
+    .row{
+        margin:2px;
+        overflow:hidden;
+        /* display:flex; 방식2 */
+        display:grid;
+    }
+    [class*=box]{
+        border:1px solid; 
+        height:80px;
+        /* float:left; 방식1*/
+        margin:2px;
+        /* flex:1; 방식2 */
+        background:lightgray;
+    }
+    /* .grid12{width:calc(960px - 8px - 4px);}
+    .grid6{width:calc(960px/2 - 6px - 4px);}
+    .grid4{width:calc(960px/3 - 4px - 4px);}
+    .grid3{width:calc(960px/4 - 3px - 4px);}
+    .grid2{width:calc(960px/6 - 3px - 4px);}  방식1 */
+    .g12{grid-template-columns: repeat(1, 1fr);}
+    .g6{grid-template-columns: repeat(2, 1fr);}
+    .g4{grid-template-columns: repeat(3, 1fr);}
+    .g3{grid-template-columns: repeat(4, 1fr);}
+    .g2{grid-template-columns: repeat(6, 1fr);}
+}
