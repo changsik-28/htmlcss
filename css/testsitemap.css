@@ -1,0 +1,104 @@
+@media (min-width:768px){
+h1{
+    width:900px;
+    margin:20px auto;
+    background-color:dodgerblue;
+    color:white;
+    letter-spacing: 10px;
+    padding:10px;
+    text-align: center;
+    text-transform: capitalize;
+    border:5px solid gray;
+    border-radius: 10px;
+    text-shadow:1px 1px black;
+}
+section{
+    width:900px;
+    margin:auto;
+}
+[class=box]{
+    float:left;
+    width:270px;
+    margin:10px;
+    padding:10px;
+    height:300px;
+    line-height:2;
+    box-sizing:border-box;
+}
+ul>li{
+    border-bottom:1px solid lightgray;
+    font-weight:bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#head1{background:#6E9ACB;}
+#head2{background:#689C54;}
+#head3{background:#8384B3;}
+#head4{background:#7F5F48;}
+#head5{background:#518A93;}
+#head6{background:#B68DBC;}
+[id*=head]{
+    border-radius: 5px;
+    border:5px solid #E4E4E4;
+    color:white;
+    text-indent:15px;
+    cursor:pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+li:hover{
+    cursor:pointer;
+    text-indent:10px;
+    transition:1s;
+}
+
+}
+@media screen and (max-width:767px){
+
+    h1{
+        margin:20px auto;
+        background-color:dodgerblue;
+        color:white;
+        letter-spacing: 10px;
+        padding:10px;
+        text-align: center;
+        text-transform: capitalize;
+        border:5px solid gray;
+        border-radius: 10px;
+        text-shadow:1px 1px black;
+    }
+    section{
+        margin:auto;
+    }
+    [class=box]{
+        margin:10px;
+        padding:10px;
+        line-height:2;
+        box-sizing:border-box;
+    }
+    ul>li{
+        border-bottom:1px solid lightgray;
+        font-weight:bold;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    #head1{background:#6E9ACB;}
+    #head2{background:#689C54;}
+    #head3{background:#8384B3;}
+    #head4{background:#7F5F48;}
+    #head5{background:#518A93;}
+    #head6{background:#B68DBC;}
+    [id*=head]{
+        width:90%;
+        border-radius: 5px;
+        border:5px solid #E4E4E4;
+        color:white;
+        text-indent:15px;
+        cursor:pointer;
+        font-family: 'Noto Sans KR', sans-serif;
+    
+    }
+    li:hover{
+        cursor:pointer;
+        text-indent:10px;
+        transition:1s;
+    }
+}

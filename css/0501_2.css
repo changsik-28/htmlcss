@@ -1,0 +1,168 @@
+section{
+    border:1px solid;
+}
+section>div{
+    width:5px;
+    height:50px;
+    background:red;
+}
+section:hover>div:nth-child(1){
+    width:300px;
+    transition-duration:1s;
+}
+section:hover>div:nth-child(2){
+    width:400px;
+    transition-duration:1s;
+    transition-delay:0.5s;
+    background:blue;
+}
+section:hover>div:nth-child(3){
+    width:450px;
+    transition-duration:1s;
+    transition-delay:1s;
+    background:orange;
+    transition-property:width,background-color;
+}
+section:hover>div:nth-child(4){
+    width:300px;
+    transition-duration:1s;
+    transition-timing-function:cubic-bezier(.62,1.12,.15,0);
+    background:gold url('../imgs/dog1.png') no-repeat left top / cover ;
+}
+section:hover>div:nth-child(5){
+    width:500px; background:tomato;
+    transition:all 1s 2s ease;
+}
+
+div>h1{
+    width:100px; 
+    height:100px;
+    border-radius:50%;
+    background:#00f;
+    animation-name: myani;
+    animation-duration:1.5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation:myani 1.5s ease 1s infinite alternate;
+}
+div:hover>h1{
+    animation-play-state:paused;
+}
+
+/* 애니메이션을 정의 */
+@keyframes myani {
+    from{
+        left:0;
+        background:red;
+    }
+    50%{
+        transform:rotate(360deg);
+    }
+    to{
+        left:400px;
+    }
+}
+[id*=box]{
+    width:100px;
+    height:100px;
+    background:orange;
+    border:1px solid;
+}
+#box1{ 
+    animation:box11 3s 0.5s alternate infinite;
+    margin:30px; position:relative;
+}
+#box2{ 
+    animation:box21 3s 0.5s alternate infinite;
+    margin:30px; position:relative;
+}
+
+@keyframes box11{
+    0%{
+        left:0;
+        top:0;
+        background:orange;
+    }
+    50%{
+        left:0;
+        top:100px;
+        background:blue;
+        transform:rotate(180deg);
+    }
+    100%{
+        left:200px;
+        background:orange;
+        transform:rotate(360deg);
+
+    }
+}
+@keyframes box21{
+    0%{
+        left:200px;
+        background:rgb(168, 50, 85);
+    }
+    50%{
+        top:100px;
+        left:100px;
+        background:rgb(54, 177, 84);
+        transform:rotate(180deg);
+    }
+    100%{
+        left:0;
+        background:rgb(216, 99, 118);
+        transform:rotate(360deg);
+    }
+}
+/* 이미지슬라이드 */
+.canvas{
+    width:500px; height:450px;
+    border:2px solid black;
+    position:relative;
+}
+.panel{
+    position:absolute;
+    left:0; top:0;
+    width:2500px;
+}
+.panel>img{
+    width:500px; height: 450px;
+    display:block;
+    float:left;
+}
+@keyframes slider{
+    from{left:0;}
+    20%{left:-500px;}
+    40%{left:-1000px;}
+    60%{left:-1500px;}
+    to{left:-2000px;}
+}
+.panel{animation: slider 10s infinite alternate;}
+.canvas{overflow:hidden;}
+.canvas:hover>.panel{
+    animation-play-state:paused;
+}
+.canvas_1{
+    width:500px; height:450px;
+    border:2px solid black;
+    position:relative;
+    overflow:hidden;
+}
+.panel_1{
+    position:absolute;
+    left:0; top:0;
+    width:2500px;
+}
+.panel_1>img{
+    width:500px; height: 450px;
+    display:block;
+}
+@keyframes slider_1{
+    from{top:0;}
+    20%{top:-450px;}
+    40%{top:-900px;}
+    60%{top:-1350px;}
+    to{top:-1800px;}
+}
+.panel_1{animation: slider_1 10s infinite alternate;}
+.canvas_1>.panel_1{width:500px;}
