@@ -30,7 +30,7 @@ section:hover>div{
     position:absolute;
     left:0;
     top:0;
-    opacity:0.4;
+    opacity:0.5;
     font-size:50px;
     text-align:center;
     line-height:200px;
@@ -53,7 +53,8 @@ section:hover>div{
 #cubic>p:nth-child(6){transform:rotateX(270deg) translate3d(0,0,100px);}
 
 #cubic{transform-style: preserve-3d; margin:150px;}
-body{perspective:500px;}
+#cubic>p{backface-visibility:visible;}
+body{perspective:1000px;}
 
 @keyframes cubic{
     from{transform:rotateX(0) rotateX(0) rotateX(0);}
