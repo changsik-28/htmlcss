@@ -12,6 +12,10 @@ hgroup{
     position:absolute;
     left:10px;
     top:25px;
+    background: rgb(217,19,199);
+    background: linear-gradient(90deg, rgba(217,19,199,0.6727065826330532) 0%, rgba(150,154,45,0.9108018207282913) 61%, rgba(207,125,18,1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 .main_gnb{
     position:absolute;
@@ -105,6 +109,9 @@ article>p{
     /* word-break:break-all;한글이면 이거 사용가능*/
     hyphens: auto;
 }
+
+/* section 끝 */
+
 footer{
     border:1px solid;
     width:960px;
@@ -120,4 +127,27 @@ footer{
 article>p::first-letter{
     font-size:2em;
     font-weight: bold;
+    color:rgb(217,19,199);
+}
+
+/* skip_nav */
+.ski_nav a{
+    position:absolute;
+    top: -100px;
+    left:0;
+    background:#000;
+    height:30px;
+    line-height: 30px;
+    color:white;
+    padding:0 10px;
+    display:block;
+}
+.ski_nav a:focus{
+    top:0;
+}
+h3{
+    background: rgb(227,27,209);
+    background: linear-gradient(90deg, rgba(227,27,209,0.6727065826330532) 0%, rgba(214,221,42,0.9108018207282913) 15%, rgba(180,114,28,1) 29%);
+    color: transparent;
+    -webkit-background-clip: text;
 }
