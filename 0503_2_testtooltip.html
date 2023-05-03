@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="XEIcon-2.2.0/xeicon.css" />
+    <style>
+      html,
+      body {
+        background: #D7E1EB;
+      }
+      .tooltip {
+        /* position: relative; */
+      }
+      .box {
+        background: white;
+        width: 50px;
+        height: 50px;
+        display: block;
+        float: left;
+        border-radius: 50%;
+        margin: 40px;
+        position: relative;
+      }
+      i {
+        position: absolute;
+        font-size: 25px;
+        top: 13px;
+        left: 12px;
+      }
+      .box:hover {
+        background: hotpink;
+        color: white;
+      }
+      span {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: -45px;
+      }
+      b {
+        display: block;
+        width: 130px;
+        height: 35px;
+        background: hotpink;
+        text-align: center;
+        border-radius: 10px 10px 10px 10px;
+      }
+      .box:hover span {
+        display: block;
+      }
+      .tooltip_wrap b::before {
+        content: "";
+        display:table;
+        border:15px solid transparent;
+        border-bottom: 15px solid hotpink;
+        width: 0;
+        height:0;
+        position: absolute;
+        left: 36%;
+        top: -30px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <section class="tooltip_wrap">
+      <div class="box">
+        <i class="xi-facebook">
+          <span>
+            <b>facebook</b>
+          </span>
+        </i>
+      </div>
+      <div class="box">
+        <i class="xi-instagram">
+          <span>
+            <b>instagram</b>
+          </span>
+        </i>
+      </div>
+      <div class="box">
+        <i class="xi-twitter">
+          <span>
+            <b>twitter</b>
+          </span>
+        </i>
+      </div>
+      <div class="box">
+        <i class="xi-twich">
+          <span>
+            <b>twich</b>
+          </span>
+        </i>
+      </div>
+      <div class="box">
+        <i class="xi-youtube-play">
+          <span>
+            <b>youtube</b>
+          </span>
+        </i>
+      </div>
+    </section>
+  </body>
+</html>

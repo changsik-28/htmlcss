@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풍선도움말</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .tooltip{
+            position:relative;
+        }
+        .tooltip span{
+            /* display:block; */
+            visibility:hidden;
+            opacity:0;
+            transition:1s;
+            background:ivory;
+            border:1px solid gray;
+            width:220px;
+            padding:10px;
+            border-radius:10px;
+            box-shadow:3px 3px gray;
+            position:absolute;
+            left:100px;
+            top:-10px;
+        }
+        .tooltip span b{
+            display:block;
+            padding:0;
+            margin:5px;
+        }
+        .tooltip:hover span{
+            /* display:block; */
+            visibility:visible;
+            opacity:1;
+        }
+        .tooltip{
+            display:block;
+            margin:20px;
+            width:100px;
+        }
+        .tooltip span::before{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+            border:10px solid transparent;
+            border-left:10px solid lightgray;
+            position:absolute;
+            left:-8px;
+            top:17px;
+            transform:rotate(180deg);
+            /* border-right: 10px solid를 줬으면 
+            transform:rotate로 돌리지않아도된다. */
+        }
+        .tooltip:hover{font-weight:bold;}
+    </style>
+  </head>
+  <body>
+    <h1>풍선도움말 (설명툴팁)</h1>
+    <div class="tooltip_wrap">
+      <a href="#" class="tooltip">
+        HTML이란?
+        <span>
+          <b> CSS 실전예제 Tooltip </b>
+          <i> CSS만으로 툴팁구현하는 세계</i>
+        </span>
+      </a>
+    </div>
+  </body>
+</html>
