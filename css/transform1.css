@@ -1,0 +1,83 @@
+.wrap-box{
+    /* 디자인 */
+    background:#CF0032;
+    width:250px;
+    height:250px;
+    padding:10px;
+    box-shadow: 0 0 0 #535258;
+    position:relative;
+    transform:translateY(0) translateX(0);
+    /* translate=이동하기 */
+    transition:1s 2s;
+    /* 나중에 이동을 위한 시간지정 */
+    margin:30px;
+}
+.wrap-box:hover{
+    box-shadow:20px 20px 0 #535258;
+    transform:translateY(-10px) translateX(-10px);
+                /* 좌측상단으로 이동 */
+}
+/* 테두리 동적인효과주기 */
+.wrap-box::before,.wrap-box::after{
+    content:'';
+    width:100%;
+    height:10px;
+    background-color: #513fa8;
+    display:block;
+    transform: scaleX(0);
+    /* 0을줘서 숨겨놓고 마우스 올릴때 키울거임 */
+    transition:1s;
+    position:absolute;
+}
+.wrap-box:before{
+    left:0;
+    top:0;
+    transform-origin: 0 0;
+    /* 기준점을 잡기위해 */
+}
+.wrap-box:hover::before{
+    transform: scaleX(1);
+}
+.wrap-box::after{
+    left:0;
+    bottom:0;
+    transform-origin: 100% 0;
+    /* 기준점을 잡기위해 */
+}
+.wrap-box:hover::after{
+    transform: scaleX(1);
+}
+.wrap-box{
+    display:flex;
+    /* .box를 가운데로 배치하기 위해서 설정 */
+}
+.box{
+    background:#535258;
+    padding:20px;
+    width:150px;
+    height:150px;
+    margin:auto;
+}
+.box::before,.box::after{
+    content:'';
+    position:absolute;
+    width:10px;
+    height:100%;
+    background:#513fa8;
+    transform:scaleY(0);
+    transition:1s 1s;
+    /* 전이시간 지연시간 */
+}
+.box::after{
+    top:0;
+    right:0;
+    transform-origin:0 0;
+}
+.box::before{
+    left:0; 
+    top:0;
+    transform-origin:0 100%;
+}
+.box:hover::before,.box:hover::after{
+    transform:scaleY(1);
+}
