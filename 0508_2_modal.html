@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<style>
+    #modal{
+        background:rgba(0,0,0,0.3);
+        width:100%;
+        height:100%;
+        position:fixed;
+        left:0;
+        top:0;
+    }
+    .modal-body{
+        display:block;
+        width:500px;
+        height:500px;
+        border:2px solid black;
+        box-shadow:2px 2px 2px lightgray;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50% , -50%);
+    }
+    .modal-sub{
+        width:500px;
+        height:470px;
+        background:white;
+        text-align:center;
+        position:relative;
+    }
+    .modal-sub>h1{
+        color:red;
+        top:50px;
+        left:190px;
+        position:absolute;
+    }
+    .modal-sub>div{
+        position:absolute;
+        top: 150px;
+        left:160px;
+    }
+    #modal{display:none;}
+    #modal:target{display:block;}
+    .btn{
+        position:absolute;
+        top:400px;
+        left:920px;
+        display:block;
+        width:100px;
+        height:30px;
+        font-size:20px;
+        font-weight: bold;
+        background:brown;
+        color:white;
+        text-align: center;
+        border-radius: 15px;
+    }
+    body>h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>모달창 숙제</h1>
+    <a href="#modal" class="btn">공지사항</a>
+    <hr>
+    <div id="modal">
+        <div class="modal-body">
+            <div class="modal-sub">
+                <h1>공지사항</h1>
+                <div>
+                    사이트 서버 정검으로<br>
+                    현재 이용하실수 없습니다.
+                </div>
+            </div>
+            <hr>
+            <a href="#">닫기</a>
+        </div>
+</body>
+</html>
