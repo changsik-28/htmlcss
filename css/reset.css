@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-text-size-adjust:none;
 }
 
 a {
@@ -24,3 +25,12 @@ a:active{color:gray;}
 input,img{
     vertical-align:baseline;
 }
+address{font-style:normal;}
+
+textarea{resize:none;}
+
+em, i, address{font-style:normal;}
+
+img, fieldset{border:0;}
+
+label{cursor:pointer;}
