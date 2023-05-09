@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/colorbox.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="./js/jquery.colorbox.js"></script>
 </head>
 <body>
-    <h2>라이트박스 사용해보기</h2>
+    <h2>라이트박스 사용해보기</h1>
     <div class="colorbox2">
         <a href="./imgs/model1.png" class="light" title="img1">img1</a>
         <a href="./imgs/model2.png" class="light" title="img2">img2</a>
@@ -18,6 +19,67 @@
         <a href="./imgs/model4.png" class="light" title="img4">img4</a>
         <a href="./imgs/model5.png" class="light" title="img5">img5</a>
     </div>
+    <div class="box">
+        <h1>CSS를 이용한 리스트 넘버링</h1>
+        <h2>커피</h2>
+        <ul data-brand="coffee">
+            <li>스타벅스</li>
+            <li>별다방</li>
+            <li>카페베네</li>
+            <li>홀리커피</li>
+            <li>이디야</li>
+        </ul>
+        <h2>주스</h2>
+        <ul data-brand="juice" >
+            <li>딸기주스</li>
+            <li>망고주스</li>
+            <li>오랜지주스</li>
+        </ul>
+    </div>
+    <style>
+        ul:after{
+            content:'-----' attr(data-brand) '-------';
+
+        }
+        ul{
+            margin:30px;
+            counter-reset:list-number;
+        }
+        ul>li{
+            counter-increment: list-number;
+        }
+        ul li:before{
+            content: counter(list-number);
+            display:inline-block;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background:brown;
+            text-align:center;
+            color:white;
+            line-height:30px;
+        }
+        .box{
+            counter-reset:title;
+        }
+        h2{
+            counter-increment: title;
+        }
+        .box>h2:before{
+            content:counter(title);
+            display:inline-block;
+            width:40px;
+            height:40px;
+            background:yellow;
+            border-radius:50%;
+            color:orangered;
+            text-align:center;
+        }
+        ul li:before{
+            content:counter(title)"-"counter(list-number);
+            padding:2px;
+        }
+    </style>
     <script>
         $(".light").colorbox({rel:'light'});
     </script>
