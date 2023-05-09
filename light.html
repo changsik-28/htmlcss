@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="./js/jquery.colorbox.js"></script>
+</head>
+<body>
+    <h2>라이트박스 사용해보기</h2>
+    <div class="colorbox2">
+        <a href="./imgs/model1.png" class="light" title="img1">img1</a>
+        <a href="./imgs/model2.png" class="light" title="img2">img2</a>
+        <a href="./imgs/model3.png" class="light" title="img3">img3</a>
+        <a href="./imgs/model4.png" class="light" title="img4">img4</a>
+        <a href="./imgs/model5.png" class="light" title="img5">img5</a>
+    </div>
+    <script>
+        $(".light").colorbox({rel:'light'});
+    </script>
+</body>
+</html>
