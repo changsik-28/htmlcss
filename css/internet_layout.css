@@ -1,0 +1,145 @@
+/* 인터넷 레이아웃 */
+
+/* 헤더레이웃 */
+header{
+    position:relative;
+    height:150px;
+    width:1000px;
+    margin:auto;
+    /* border:1px solid; */
+}
+header h1{
+    position:absolute;
+    left:50px;top:20px;
+}
+header nav{
+    position:absolute;
+    right:10px;
+    top:50px;
+}
+
+/* 네비게이션메뉴 레이아웃 */
+header nav{
+    width:450px;
+}
+header nav ul{
+    display:flex;
+}
+header nav ul>li{
+    flex:1;
+}
+
+/* 서브메뉴 숨기기 */
+ul ol{
+    background:lightgray;
+    display:none;    
+}
+ul>li{
+    position:relative;
+    z-index:2;
+}
+ul>li:hover ol{
+    display:block;
+}
+
+/* 이미지 슬라이드 레이아웃 */
+.img_slide{
+    height:350px;
+    width:1000px;
+    margin:auto;
+}
+.img_slide img{
+    height:350px;
+    width:1000px;
+}
+
+/* 컨텐츠 레이아웃 */
+.contentns{
+    display:flex;
+    justify-content: space-between;
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+}
+.contentns>div{
+    flex:1;
+    margin:20px;    
+}
+
+/* 모달창 구현하기 */
+#modal{
+    display:none;
+    position:fixed;
+    left:0; top:0; bottom:0; right:0;
+    background:rgba(0,0,0,0.8);
+    z-index:100;
+    text-align: center;
+}
+/* #modal:target{display:block;} */
+
+/* 모달창 가운데 정렬 */
+.modal_inner{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    border:5px solid black;
+    z-index:100;
+    width:600px;
+    height:400px;
+}
+
+/* 서비스 레이아웃 */
+.service{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    width:1000px;
+    margin:auto;
+}
+.service .icons img{
+    display:block;
+    margin:auto;
+}
+.text{
+    text-align:center;
+}
+
+/* 푸터 레이아웃 */
+footer{
+    position:relative;
+    width:1000px;
+    height:150px;
+    margin:auto;
+    justify-content: space-between;
+    padding:10px;
+}
+.notice_go ul{
+    position:absolute;
+    top:20px;
+    display:flex;
+    width:500px;
+}
+.notice_go ul li{
+    flex:1;
+    padding:5px;
+    text-align:center;
+}
+.notice_go ul li a{
+    height:30px;
+    line-height:30px;
+}
+footer .address{
+    position:absolute;
+    left:550px;
+    top:30px;
+}
+
+/* 해더를 고정바로 구현하기 */
+header{
+    position:fixed;
+    left:0;top:0;right:0;
+    z-index:1000;
+}
+.img_slide{
+    padding-top:150px;
+}

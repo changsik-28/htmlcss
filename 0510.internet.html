@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/internet.css">
+    <link rel="stylesheet" href="css/internet_layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1><img src="./imgs/LOGO.png"></h1>
+        <nav>
+            <ul>
+                <li><a href="#">센터소개</a>
+                    <ol>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">센터임무</a>
+                    <ol>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                    </ol>
+                </li>
+                <li><a href="#" id="contact">Contact</a>
+                    <ol>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                        <li><a href="#">Sub menu1</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </nav>
+    </header><!-- header end -->
+    <script>
+        var contact=document.getElementById('contact');
+        contact.onclick=function(){
+            // alert('경고창입니다');
+            console.log('welcome to my world!!!');
+            console.dir('안녕하세요');
+            window.open("0510_1_contact.html",'창이름',"width=500,height=500,left=300,top=300,toolbar=no,location=no,status=no,menubar=no,resizable=no");
+            // window.open("0510_1_contact.html","창이름","popup");
+        }
+    </script>
+    <div class="img_slide">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./imgs/internetimg1.jpg"></div>
+              <div class="swiper-slide"><img src="./imgs/internetimg2.jpg"></div>
+              <div class="swiper-slide"><img src="./imgs/internetimg3.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          
+    </div><!-- img_slide end -->
+
+    <div class="contentns">
+        <div class="notice">
+            <h2>공지사항</h2>
+            <table class="table">
+                <tr>
+                    <td><a href="#">인터넷에서 12회 심포지움을 개체합니다</a></td>
+                    <td>2018-04-10</td>
+                </tr>
+                <tr>
+                    <td><a href="#">인터넷에서 12회 심포지움을 개체합니다</a></td>
+                    <td>2018-04-10</td>
+                </tr>
+                <tr>
+                    <td><a href="#">인터넷에서 12회 심포지움을 개체합니다</a></td>
+                    <td>2018-04-10</td>
+                </tr>
+                <tr>
+                    <td><a href="#">인터넷에서 12회 심포지움을 개체합니다</a></td>
+                    <td>2018-04-10</td>
+                </tr>
+                <tr>
+                    <td><a href="#">인터넷에서 12회 심포지움을 개체합니다</a></td>
+                    <td>2018-04-10</td>
+                </tr>
+            </table>
+        </div>
+        <div class="partner">
+            <h2>Web Partner Site</h2>
+            <div class="partner_info">
+                <a href="#modal">
+                    <img src="./imgs/internetimg1.jpg" id="imgModal">
+                </a>
+            </div>
+        </div>
+    </div><!-- contents 끝 -->
+    <!-- 모달팝업창 -->
+    <div id="modal">
+        <div class="modal_inner">
+            <img src="./imgs/PARTNER_UP.png">
+            <hr>
+            <button id="close">닫기</button>
+        </div>
+    </div>
+    <script>
+        var btn=document.getElementById('close');
+        var modal=document.getElementById('modal');
+        var imgModal=document.getElementById('imgModal');
+        //그림을 클릭하면 modal창을 보여라.
+        imgModal.onclick=function(){
+            modal.style.display="block";
+        }
+        //닫기버튼을 클릭하면 모달창이 닫혀라.
+        btn.onclick=function(){
+            modal.style.display="none";
+            //modal에 CSS의 display를 none으로 지정한다.
+        }
+    </script>
+
+    <div class="service">
+        <div class="icons">
+            <img src="./imgs/icon1.png" alt="">
+            <p class="info">인터넷 정보수집 발굴</p>
+            <p class="text">인터넷 사례조사</p>
+        </div>
+        <div class="icons">
+            <img src="./imgs/icon2.png">
+            <p class="info">교육 프로그램 개발</p>
+            <p class="text">인터넷 사례조사</p>
+        </div>
+        <div class="icons">
+            <img src="./imgs/icon3.png">
+            <p class="info">역기능 예방 및 대응</p>
+            <p class="text">인터넷 사례조사</p>
+        </div>
+    </div><!-- service 끝 -->
+
+    <footer>
+        <div class="notice_go">
+            <ul>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">개인업보처리방침</a></li>
+            </ul>
+        </div>
+        <div class="address">
+            <p>인터넷 센터</p>
+            <p>대표자 : 윤선미</p>
+            <p>개인정보관리책임자 : 장동건</p>
+            <p>사업장주소 : 서울시 여의도 청화대학교</p>
+        </div>
+    </footer>
+    <script>
+        const swiper = new Swiper('.swiper', {
+
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  autoplay: {
+   delay: 5000,
+ },
+ 
+});
+    </script>
+</body>
+</html>
