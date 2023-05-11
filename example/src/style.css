@@ -1,49 +1,280 @@
-body {
-  box-sizing: border-box;
-  height: 100vh;
-  margin: 0;
-  border: 0; }
+@charset "UTF-8";
+nav {
+  background: pink;
+  padding: 10px;
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+nav ul li {
+  color: white;
+  margin-right: 10px;
+}
 
-header {
-  background-color: #67438f;
-  font-family: "Poppins", sans-serif;
-  height: 254px; }
-  header h1 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-size: 60px;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    font-weight: 600;
-    margin: 0; }
-  header button {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    font-size: 15px; }
-    header button:active {
-      background: rgba(0, 0, 0, 0.1); }
+/*ex-2*/
+.background-img {
+  width: 100%;
+  height: auto;
+  background-image: url("../../imgs/연예인1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-.text-container {
-  padding: 40px;
-  background-color: #7e438f;
-  height: 100%; }
+/*ex-3*/
+.box {
+  width: 200px;
+  height: 200px;
+  background: red;
+  transition: 1s;
+}
+.box:hover {
+  background: blue;
+}
 
-.text-box {
-  margin-bottom: 50px; }
-  .text-box h2 {
-    color: #1f1f1f;
-    font-size: "Noto Sans KR", sans-serif;
-    font-family: "Noto Sans KR", sans-serif; }
-  .text-box p {
-    color: #313030;
-    font-size: "Noto Sans KR", sans-serif;
-    font-family: "Noto Sans KR", sans-serif;
-    margin: 0; }
+/*ex-4*/
+.one {
+  color: lime;
+}
+.one .two {
+  color: blue;
+}
+.one .two .three {
+  color: pink;
+}
+p {
+  color: red;
+}
+
+/*변수 사용하기*/
+h1 {
+  color: red;
+  font-size: 32px;
+}
+h1 span {
+  color: blue;
+}
+
+p {
+  text-align: right;
+}
+
+/*mixin 사용하기*/
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.two li {
+  margin-right: 20px;
+}
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: blue;
+  font-size: 20px;
+  background: red;
+}
+.three li {
+  margin-right: 30px;
+}
+
+/*extend*/
+/*class 코드 짜기*/
+.profile-user, .comment-user {
+  background-image: url("../../imgs/연예인6.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.comment-user {
+  box-shadow: 4px 4px 5px black;
+}
+
+.message-button, .follow-button {
+  width: 133px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.follow-button {
+  color: red;
+  border: 3px solid blue;
+}
+
+.message-button {
+  color: blue;
+  border: 3px solid red;
+}
+
+.square-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+.one {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.two {
+  width: 10;
+  height: 10;
+  background-color: red;
+  border-radius: 5;
+}
+
+.three {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.four {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.five {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.six {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.next {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2.5px;
+  border-left-color: black;
+}
+
+.photo-box:nth-child(1) {
+  background-image: url("abc1.png");
+}
+
+.photo-box:nth-child(2) {
+  background-image: url("abc2.png");
+}
+
+.photo-box:nth-child(3) {
+  background-image: url("abc3.png");
+}
+
+.photo-box:nth-child(4) {
+  background-image: url("abc4.png");
+}
+
+.photo-box:nth-child(5) {
+  background-image: url("abc5.png");
+}
+
+.color-circle:nth-child(1) {
+  background: red;
+}
+
+.color-circle:nth-child(2) {
+  background: blue;
+}
+
+.color-circle:nth-child(3) {
+  background: green;
+}
+
+.color-circle:nth-child(4) {
+  background: white;
+}
+
+.color-circle:nth-child(5) {
+  background: black;
+}
+
+/*while*/
+.content-8 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-6 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-4 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-2 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-0 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+/*function*/
+.sup {
+  font-size: 12.3609394314px;
+}
+
+.sidebar {
+  margin-left: 64px;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */

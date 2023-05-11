@@ -124,4 +124,157 @@ p {
 .message-button {
   color: blue;
   border: 3px solid red;
+}
+
+.square-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+.one {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.two {
+  width: 10;
+  height: 10;
+  background-color: red;
+  border-radius: 5;
+}
+
+.three {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.four {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.five {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.six {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.next {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2.5px;
+  border-left-color: black;
+}
+
+.photo-box:nth-child(1) {
+  background-image: url("abc1.png");
+}
+
+.photo-box:nth-child(2) {
+  background-image: url("abc2.png");
+}
+
+.photo-box:nth-child(3) {
+  background-image: url("abc3.png");
+}
+
+.photo-box:nth-child(4) {
+  background-image: url("abc4.png");
+}
+
+.photo-box:nth-child(5) {
+  background-image: url("abc5.png");
+}
+
+.color-circle:nth-child(1) {
+  background: red;
+}
+
+.color-circle:nth-child(2) {
+  background: blue;
+}
+
+.color-circle:nth-child(3) {
+  background: green;
+}
+
+.color-circle:nth-child(4) {
+  background: white;
+}
+
+.color-circle:nth-child(5) {
+  background: black;
+}
+
+/*while*/
+.content-8 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-6 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-4 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-2 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-0 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+/*function*/
+.sup {
+  font-size: 12.3609394314px;
+}
+
+.sidebar {
+  margin-left: 64px;
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */
