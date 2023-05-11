@@ -120,3 +120,37 @@ p{
     }
     background:red;
 }
+
+/*extend*/
+/*class 코드 짜기*/
+.profile-user{
+    background-image:url("../../imgs/연예인6.png");
+    background-size:cover;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+}
+
+.comment-user{
+    @extend .profile-user;
+    box-shadow:4px 4px  5px black;
+}
+%bace-button{
+    width:133px;
+    height:44px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+}
+.follow-button{
+    @extend %bace-button;
+    color:red;
+    border:3px solid blue;
+}
+.message-button{
+    @extend %bace-button;
+    color:blue;
+    border:3px solid red;
+}

@@ -90,4 +90,38 @@ p {
 }
 .three li {
   margin-right: 30px;
+}
+
+/*extend*/
+/*class 코드 짜기*/
+.profile-user, .comment-user {
+  background-image: url("../../imgs/연예인6.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.comment-user {
+  box-shadow: 4px 4px 5px black;
+}
+
+.message-button, .follow-button {
+  width: 133px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.follow-button {
+  color: red;
+  border: 3px solid blue;
+}
+
+.message-button {
+  color: blue;
+  border: 3px solid red;
 }/*# sourceMappingURL=style.css.map */
