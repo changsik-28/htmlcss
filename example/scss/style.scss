@@ -39,3 +39,84 @@ nav{
         background:blue;
     }
 }
+
+/*ex-4*/
+//@at-root
+//중첩에서 벗어난다
+.one{
+    color:lime;
+    .two{
+        color:blue;
+        .three{
+            color:pink;
+            @at-root p {
+                color:red;
+            }
+        }
+    }
+}
+
+/*변수 사용하기*/
+//전역변수
+$bgColor:red;
+$font-h1:20px;
+$valid-sides:left, center, right;
+$font-sizes:("myh1" : 45px, "myh2":20px, "myp": 16px);
+
+h1{
+    $spanColor:blue;  //지역변수
+    color:$bgColor;
+    font-size:map-get($font-sizes,"myp")*2;
+    span{
+        color:$spanColor;
+    }
+}
+p{
+    //color:$spanColor;사용 불가 이유는 h1안에 $spanColor라는 변수를 선언해서 지역변수이기때문에 다른곳에는 사용이 불가하다
+    text-align:nth($valid-sides,3);
+}
+
+/*mixin 사용하기*/
+@mixin flexCenter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+}
+
+.one{
+    @include flexCenter();
+}
+
+//기본파라미터,default parameter
+@mixin flexCenterTwo($size:30px){
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    li{
+        margin-right:$size;
+    }
+}
+
+.two{
+    @include flexCenterTwo(20px);
+}
+
+@mixin flexCenterThree($size:30px){
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    li{
+        margin-right:$size;
+    }
+    @content
+}
+.three{
+    @include flexCenterThree{
+        color:blue;
+        font-size:20px;
+    }
+    background:red;
+}

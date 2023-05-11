@@ -32,4 +32,62 @@ nav ul li {
 }
 .box:hover {
   background: blue;
+}
+
+/*ex-4*/
+.one {
+  color: lime;
+}
+.one .two {
+  color: blue;
+}
+.one .two .three {
+  color: pink;
+}
+p {
+  color: red;
+}
+
+/*변수 사용하기*/
+h1 {
+  color: red;
+  font-size: 32px;
+}
+h1 span {
+  color: blue;
+}
+
+p {
+  text-align: right;
+}
+
+/*mixin 사용하기*/
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.two li {
+  margin-right: 20px;
+}
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: blue;
+  font-size: 20px;
+  background: red;
+}
+.three li {
+  margin-right: 30px;
 }/*# sourceMappingURL=style.css.map */
