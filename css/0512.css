@@ -1,0 +1,137 @@
+.multi{
+    column-count:3;
+    padding:10px;
+    column-rule-color:red;
+    column-gap:20px;/*간격*/
+    column-rule-style:solid;
+    column-rule-width:5px;
+    column-rule:5px dotted blue;
+    /* column-width:120px; */
+    /*width 만큼 나눠지는거*/
+}
+.multi:hover p{
+    column-span:all;
+}
+
+.charts{
+    display:flex;
+    justify-content: center;
+}
+svg{
+    width:220px;
+    height:220px;
+}
+svg circle{
+    /* 면색 */
+    fill:gray;
+    /* 선색 */
+    stroke:orange;
+    stroke-width:20;
+
+    stroke-dasharray:630;
+    stroke-dashoffset:50;
+    stroke-linecap:round;
+}
+
+@keyframes line1{
+    from{
+        stroke-dashoffset:630;
+    }
+    to{
+        stroke-dashoffset: 100;
+    }
+}
+
+.chart circle{
+    animation:line1 3s alternate infinite;
+    /* forwards는 애니메이션 끝에서 정지 */
+}
+
+@keyframes line2{
+    from{
+        stroke-dashoffset:630;
+    }
+    to{
+        stroke-dashoffset: 170;
+    }
+}
+.chart:nth-child(2) circle{
+    animation:line2 1s alternate infinite;
+    stroke:red;
+}
+@keyframes line3{
+    from{
+        stroke-dashoffset:630;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.chart:nth-child(3) circle{
+    animation:line3 4s alternate infinite;
+    stroke:blue;
+}
+
+
+ul{
+    display:flex;
+    margin:30px;
+}
+ul>li{
+    border:1px solid;
+    text-align:center;
+    text-transform:uppercase;
+}
+ul>li>a{
+    padding:10px;
+    display:block;
+    text-align: center;
+}
+
+/* 기본상태에서 영문글자가 나오고
+마우스올리면 한글글자가 나오게 하기 */
+
+
+ul>li>a>span:nth-child(1){
+    display:block;
+}
+ul>li>a>span:nth-child(2){
+    display:none;
+}
+ul>li:hover>a>span:nth-child(1){
+    display:none;
+}
+ul>li:hover>a>span:nth-child(2){
+    display:block;
+}
+ul{width:500px;}
+ul>li{flex:1;}
+
+
+
+ol>li>a>img{width:100%;height:300px;display:block;}
+ol{
+    display:flex;
+}
+ol>li{
+    border:1px solid;
+    margin:10px;
+    display:block;
+    flex:1;
+}
+ol>li>a{
+    display:block;
+}
+
+ol>li>a>img:nth-child(1){display:none;}
+ol>li>a>img:nth-child(2){display:block;}
+ol>li:hover>a>img:nth-child(1){display:block;}
+ol>li:hover>a>img:nth-child(2){display:none;}
+
+ol>li{
+    flex:1;
+}
+body>h1:nth-child(1){
+    font-size:50px;
+    text-align: center;
+}
